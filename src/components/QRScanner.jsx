@@ -1,9 +1,10 @@
 import React, { useState, useRef } from "react";
+import QrReader from "react-qr-reader";
 
 const QRScanner = () => {
   const [showMenu, setShowMenu] = useState(false);
   const qrRef = useRef(null);
-  const [scanResultFile, setScanResultFile] = useState("");
+  const [fileResult, setFileResult] = useState();
   const toggleMenu = () => {
     setShowMenu(!showMenu);
   };
@@ -12,6 +13,9 @@ const QRScanner = () => {
     switch (option) {
       case "Upload":
         // Open file input for uploading from gallery
+        {
+          openDialog();
+        }
 
         break;
       case "Scan":
@@ -22,7 +26,19 @@ const QRScanner = () => {
         break;
     }
   };
-
+  const openDialog = () => {
+    qrRef.current.openImageDialog();
+  };
+  const fileError = (error) => {
+    if (error) {
+      console.log(error);
+    }
+  };
+  const fileScan = (result) => {
+    if (result) {
+      setFileResult(result);
+    }
+  };
   return (
     <>
       <div className="relative">
@@ -51,7 +67,14 @@ const QRScanner = () => {
               </button>
             </div>
           )}
-          <div className="font-semibold">Result :</div>
+          <QrReader
+            ref={qrRef}
+            delay={300}
+            onError={fileError}
+            onScan={fileScan}
+            legacyMode={true}
+          />
+          <div className="font-semibold">Result : {fileResult}</div>
         </div>
       </div>
     </>
