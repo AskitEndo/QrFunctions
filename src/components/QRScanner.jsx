@@ -9,23 +9,6 @@ const QRScanner = () => {
     setShowMenu(!showMenu);
   };
 
-  const handleMenuClick = (option) => {
-    switch (option) {
-      case "Upload":
-        // Open file input for uploading from gallery
-        {
-          openDialog();
-        }
-
-        break;
-      // case "Scan":
-      //   // Show menu for scanning using camera
-      //   setShowMenu(true);
-      //   break;
-      default:
-        break;
-    }
-  };
   const openDialog = () => {
     qrRef.current.openImageDialog();
   };
@@ -65,7 +48,9 @@ const QRScanner = () => {
             <div className="flex  p-2 absolute top-full right-0 mt-2 bg-emerald-900 text-white rounded shadow-md">
               <button
                 className="block w-full px-4 py-2 rounded-sm hover:bg-green-400  active:transform active:scale-110 transition-transform"
-                onClick={() => handleMenuClick("Upload")}
+                onClick={() => {
+                  openDialog();
+                }}
               >
                 Upload
                 <QrReader
@@ -77,10 +62,7 @@ const QRScanner = () => {
                 />
               </button>
 
-              <span
-                className="block w-full px-4 py-2 rounded-sm hover:bg-green-400 active:transform active:bg-emerald-200 active:text-black transition-transform"
-                // onClick={() => handleMenuClick("Scan")}
-              >
+              <span className="block w-full px-4 py-2 rounded-sm hover:bg-green-400 active:transform active:bg-emerald-200 active:text-black transition-transform">
                 Camera
                 <QrReader
                   delay={300}
