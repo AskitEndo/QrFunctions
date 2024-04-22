@@ -10,8 +10,8 @@ Hi there! I'm AskitEndo, the creator of QR Converter. I'm passionate about devel
 
 - Convert text to QR code
 - Decode QR code to text
-- Supports uploading files for QR code decoding ❗Now Live❗
-- Ability to scan QR codes directly from the webcam (Feature under development)
+- Supports uploading files for QR code decoding
+- Ability to scan QR codes directly from the webcam
 
 ## Usage 📝
 
@@ -23,30 +23,19 @@ Hi there! I'm AskitEndo, the creator of QR Converter. I'm passionate about devel
 
 2. **QR to Text Conversion:**
    - Upload a QR code image file using the "Upload" button.
-   - Alternatively, if available, use the "Scan" button to scan QR codes directly from the webcam.
-   - The decoded text will be displayed below.
+   - Alternatively, if available, scan QR codes directly from the webcam.
+   - The decoded text will be displayed below as Result.
 
 ## Dependencies 🛠️
 
 - [GoQR API](https://goqr.me/api/) - For text to QR code conversion.
-- [react-qr-reader 2.2.1](https://www.npmjs.com/package/react-qr-reader) - For QR to Text from Local storage.
+- [react-qr-reader 2.2.1](https://www.npmjs.com/package/react-qr-reader) - For QR to Text from Local storage and using Webcam.
 - Made on Basic Vite + React template.
 - Uses TailwindCSS for better UI.
-
-## Future Enhancements 🌟
-
-- Implement additional features for QR code scanning from the webcam.
-- Improve user interface for better user experience.
-- Add support for more QR code generation and decoding options.
 
 ## Contributing 🤝
 
 Contributions are welcome! If you have any suggestions, feature requests, or bug reports, please feel free to open an issue or submit a pull request.
-
-## Coming Soon 🕒
-
-- [NEW] Uploading from Local Storage is Now Supported!
-- QR to text conversion feature is currently under development. Stay tuned for updates!
 
 ## License 📄
 
