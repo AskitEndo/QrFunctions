@@ -2,9 +2,16 @@
 
 Welcome to QR Converter! This project aims to provide a convenient tool for converting text to QR codes and vice versa. It utilizes the [GoQR API](https://goqr.me/api/) for text to QR code conversion and provides options for both uploading a file using [react-qr-code](https://www.npmjs.com/package/react-qr-reader) and scanning from a webcam for QR code to text conversion.
 
-## 🚨 **Site Live Now!** 🚨
-
-🔗 **[🔥 Visit QrFunctions NOW! 🔥](https://qrfun.netlify.app/)**
+<br/>
+<div align="center">
+ <strong> 
+ 🚨 Site Live Now! 🚨
+ </strong>
+ <h3>
+  <a href="https://qrfun.netlify.app/"><b>🔥 Visit QrFunctions NOW! 🔥</b></a>
+ </h3>
+</div>
+<br/>
 
 ## About Me 👨‍💻
 
